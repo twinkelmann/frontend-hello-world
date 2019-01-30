@@ -1,8 +1,8 @@
 {
   "name": "frontend-hello-world",
   "version": "1.0.0",
-  "description": "This is a Hello World application, using Prettier, Tailwind, Mithril JSX, PurgeCSS and Laravel Mix",
-  "main": "index.js",
+  "description": "This is a Hello World application, using Prettier, Tailwind, Mithril, JSX (optional), PurgeCSS and Laravel Mix",
+  "main": "src/app.js",
   "author": "Scott Winkelmann",
   "license": "MIT",
   "private": true,
