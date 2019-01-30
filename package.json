@@ -1,0 +1,30 @@
+{
+  "name": "frontend-hello-world",
+  "version": "1.0.0",
+  "description": "This is a Hello World application, using Prettier, Tailwind, Mithril JSX, PurgeCSS and Laravel Mix",
+  "main": "index.js",
+  "author": "Scott Winkelmann",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "server": "serve -s public",
+    "prettify": "prettier --write \"src/**/*\""
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "laravel-mix": "^4.0.14",
+    "laravel-mix-purgecss": "^4.1.0",
+    "prettier": "^1.16.2",
+    "sass": "^1.16.1",
+    "sass-loader": "7.*",
+    "serve": "^10.1.1",
+    "tailwindcss": "^0.7.4",
+    "vue-template-compiler": "^2.5.22"
+  },
+  "dependencies": {
+    "mithril": "^1.1.6"
+  }
+}
