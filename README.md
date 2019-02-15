@@ -30,6 +30,12 @@ If you do install it, add the following line in your workspace settings:
 }
 ```
 
+## Editorconfig
+
+As for Prettier, it is recommended that you use an extension that respects the _.editorconfig_ file.
+
+In VSCode, you can install _EditorConfig for VS Code_.
+
 ## Scripts
 
 ### hot
