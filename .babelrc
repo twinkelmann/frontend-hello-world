@@ -1,0 +1,15 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": "auto",
+        "targets": {
+          "node": "current",
+          "browsers": ["> 1%", "last 2 versions", "not ie <= 8", "ie >= 10"]
+        }
+      }
+    ]
+  ],
+  "plugins": ["@babel/plugin-transform-runtime"]
+}

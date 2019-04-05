@@ -10,7 +10,7 @@ mix
   .extract()
   .sass('src/app.scss', public)
 
-  .copy('res', public + '/res')
+  .copy('res', public)
   .copy('src/index.html', public)
 
   .disableNotifications()

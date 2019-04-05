@@ -2,7 +2,7 @@
 
 _The place to start your next frontend application in 2019_
 
-This is a Hello World application, using [Prettier](https://prettier.io/docs/en/index.html), [Tailwind](https://tailwindcss.com/docs/what-is-tailwind/), [Mithril](https://mithril.js.org/#what-is-mithril) [JSX](https://mithril.js.org/jsx.html) (optional), [PurgeCSS](https://www.purgecss.com/) and [Laravel Mix](https://laravel-mix.com/docs/4.0/basic-example).
+This is a Hello World application, using [Babel 7](https://babeljs.io/), [Prettier](https://prettier.io/docs/en/index.html), [Tailwind](https://tailwindcss.com/docs/what-is-tailwind/), [Mithril](https://mithril.js.org/#what-is-mithril) [JSX](https://mithril.js.org/jsx.html) (optional), [PurgeCSS](https://www.purgecss.com/), [Laravel Mix](https://laravel-mix.com/docs/4.0/basic-example), [Chai](https://www.chaijs.com/) and [Mocha](https://mochajs.org/).
 
 ## Starting the project
 
@@ -38,13 +38,13 @@ In VSCode, you can install _EditorConfig for VS Code_.
 
 ## Scripts
 
-### hot
-
-Builds in development mode and automatically reloads when files have been altered.
-
 ### dev
 
-Builds in development mode.
+Builds in development mode (no optimizations).
+
+### watch
+
+Builds in development mode and automatically reloads when files have been altered.
 
 ### prod
 
@@ -58,6 +58,10 @@ Starts a simple webserver in the public directory, serving a single file (useful
 
 Runs Prettier on all files inside the source directory.
 
+### test
+
+Runs Mocha, the test framework, on all files in the _test_ folder
+
 ## JSX Support
 
 Install the Babel plugin.
@@ -66,11 +70,13 @@ Install the Babel plugin.
 yarn add -D @babel/plugin-transform-react-jsx
 ```
 
-Create a file named _.babelrc_ in the root directory and put the following content in it:
+Add the following in _.babelrc_:
 
 ```json
 {
+  ...
   "plugins": [
+    ...
     [
       "@babel/plugin-transform-react-jsx",
       {

@@ -1,30 +1,39 @@
 {
   "name": "frontend-hello-world",
-  "version": "1.0.0",
-  "description": "This is a Hello World application, using Prettier, Tailwind, Mithril, JSX (optional), PurgeCSS and Laravel Mix",
+  "version": "2.0.0",
+  "description": "This is a Hello World application, using Babel 7, Prettier, Tailwind, Mithril, JSX (optional), PurgeCSS, Laravel Mix, Chai and Mocha.",
   "main": "src/app.js",
   "author": "Scott Winkelmann",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "server": "serve -s public",
-    "prettify": "prettier --write \"src/**/*\""
+    "prettify": "prettier --write \"src/**/*\"",
+    "test": "mocha --require @babel/register test/"
   },
   "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.4.0",
+    "babel-loader": "^8.0.5",
+    "chai": "^4.2.0",
     "cross-env": "^5.2.0",
-    "laravel-mix": "^4.0.14",
+    "laravel-mix": "^4.0.15",
     "laravel-mix-purgecss": "^4.1.0",
-    "prettier": "^1.16.2",
-    "sass": "^1.16.1",
-    "sass-loader": "7.*",
-    "serve": "^10.1.1",
+    "mocha": "^6.0.2",
+    "prettier": "^1.16.4",
+    "sass": "^1.17.4",
+    "sass-loader": "^7.1.0",
+    "serve": "^11.0.0",
     "tailwindcss": "^0.7.4",
-    "vue-template-compiler": "^2.5.22"
+    "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.4.3",
     "mithril": "^1.1.6"
   }
 }

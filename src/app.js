@@ -1,3 +1,4 @@
+import '@babel/polyfill'
 import m from 'mithril'
 
 import HelloView from './Hello.view'
