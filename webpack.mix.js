@@ -19,10 +19,7 @@ mix
     postCss: [tailwindcss('tailwind.js')],
   })
   .sourceMaps(false) // enable source maps but not in production
-
-// Only run PurgeCSS during production builds for faster development builds
-// and so you still have the full set of utilities available during
-// development.
-if (mix.inProduction()) {
-  mix.purgeCss({ folders: ['src'] })
-}
+  .purgeCss({
+    extensions: ['html', 'js'],
+    folders: ['src'],
+  })
